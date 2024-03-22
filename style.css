@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Belgrano", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    background-image: url('assets/pexels-helena-lopes-933964.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: #f0f0f0;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+nav {
+    height: 80px;
+    padding: 0px 5%;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    /* border: 2px rgb(0, 0, 0); */
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.109);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.othernav {
+    /* border: 2px solid rgb(0, 9, 128); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.othernav a {
+    text-decoration: none;
+    color: white;
+    /* border: 2px solid green; */
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+.othernav button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    padding: 6px 16px;
+    background-color: #f0f0f000;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.othernav button:hover{
+    background-color: rgb(25,164,99);
+    border: 2px solid rgb(25,164,99);
+    font-weight: 700;
+}
+.othernav a:hover{
+    font-weight: 600;
+    color: rgb(229, 228, 228);
+}
+.big{
+    position: absolute;
+    /* border: 2px solid yellow;
+    
+    
+    
+    
+    
+    */
+}
+.bigcontainer{
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    color: white;
+    /* border: 2px solid red; */
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    /* position: absolute; */
+}
+
+/* Blinking Animation :) */
+
+.bigcontainer span{
+    font-weight: 700;
+    position: relative;
+    color: aqua;
+    text-align: center;
+}
+.bigcontainer span::before{
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+    height: 30px;
+    width: 2px;
+    background: aqua;
+}
+.bigcontainer span.stop-blinking::before{
+    animation: none;
+}
+.DEV{
+    /* width: 100vw; */
+    position:relative;
+    /* border:2px solid green; */
+    top:80vh;
+    /* height: 5px; */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    /* text-decoration: underline; */
+}
+.DEV p{
+    padding: 20px;
+    color: rgb(217, 217, 217);
+}
+@keyframes blink {
+    50%{
+        opacity: 0;
+    }
+}
+
+.big button{
+    padding: 8px 26px;
+    background-color: rgb(15,121,175);
+    color: white;
+    border: 2px solid rgb(15,121,175);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.big button{
+    position: absolute;
+    top: 57%;
+    left:46%;
+}
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+@media (max-width:600px){
+    .vanish{
+        display:none;
+    }
+    #Small::before {
+        content: "Info";
+    }
+    .bigcontainer{
+        height: 20vh;
+    }
+    .DEV{
+        top:20vh
+    }
+    .big button{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:600px){
+    #Small::before {
+        content: "How it works ?";
+    }
+    .DEV{
+        display: none;
+    }
+}
